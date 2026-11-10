@@ -1,2 +1,21 @@
+# macOS
 .DS_Store
+.AppleDouble
+
+# Dependencies
 node_modules/
+
+# Vercel
+.vercel/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor files
+.vscode/
+.idea/
