@@ -31,23 +31,111 @@
   <div class="can-wrap" aria-hidden="true">
     <svg class="can" viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="metal" x1="0" x2="1">
-          <stop offset="0" stop-color="#9aa3ab"/><stop offset=".18" stop-color="#f4f6f8"/>
-          <stop offset=".42" stop-color="#cfd5da"/><stop offset=".62" stop-color="#ffffff"/>
-          <stop offset=".85" stop-color="#b3bbc2"/><stop offset="1" stop-color="#7f8890"/>
+        <linearGradient id="silverBody" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#737d85"/>
+          <stop offset=".13" stop-color="#c5cbd0"/>
+          <stop offset=".3" stop-color="#f8fafb"/>
+          <stop offset=".52" stop-color="#b9c1c7"/>
+          <stop offset=".72" stop-color="#f7f9fa"/>
+          <stop offset=".9" stop-color="#aab2b9"/>
+          <stop offset="1" stop-color="#6d7881"/>
         </linearGradient>
-        <linearGradient id="top" x1="0" x2="1"><stop offset="0" stop-color="#8d969e"/><stop offset=".5" stop-color="#e7ebee"/><stop offset="1" stop-color="#8d969e"/></linearGradient>
+
+        <linearGradient id="silverLid" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f9fafb"/>
+          <stop offset=".5" stop-color="#9ca6ae"/>
+          <stop offset="1" stop-color="#e9edef"/>
+        </linearGradient>
+
+        <radialGradient id="waterDrop" cx=".3" cy=".25" r=".8">
+          <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+          <stop offset=".35" stop-color="#dce7ed" stop-opacity=".65"/>
+          <stop offset=".75" stop-color="#71818c" stop-opacity=".35"/>
+          <stop offset="1" stop-color="#fff" stop-opacity=".8"/>
+        </radialGradient>
+
+        <clipPath id="classicCanClip">
+          <path d="M39 63 Q39 44 56 38 L144 38 Q161 44 161 63 L161 365 Q161 389 143 397 L57 397 Q39 389 39 365Z"/>
+        </clipPath>
       </defs>
-      <ellipse cx="100" cy="402" rx="72" ry="12" fill="#000" opacity=".18"/>
-      <path d="M38 62 Q38 44 56 38 L144 38 Q162 44 162 62 L162 372 Q162 392 144 398 L56 398 Q38 392 38 372Z" fill="url(#metal)"/>
-      <rect x="38" y="196" width="124" height="34" fill="#E4002B"/>
-      <rect x="38" y="196" width="124" height="34" fill="url(#metal)" opacity=".28"/>
-      <text x="100" y="178" text-anchor="middle" font-family="Archivo,Arial" font-weight="900" font-size="30" fill="#E4002B" font-stretch="75%">Diet</text>
-      <text x="100" y="260" text-anchor="middle" font-family="Archivo,Arial" font-weight="900" font-size="34" fill="#E4002B" font-stretch="75%">Coke</text>
-      <text x="100" y="336" text-anchor="middle" font-family="Archivo,Arial" font-weight="600" font-size="11" fill="#555">ZERO SUGAR · 330 ml</text>
-      <path d="M38 62 Q38 50 50 44 L150 44 Q162 50 162 62 L162 66 Q100 78 38 66Z" fill="url(#top)"/>
-      <ellipse cx="100" cy="46" rx="52" ry="7" fill="#c9d0d6"/>
-      <ellipse cx="100" cy="45" rx="36" ry="4" fill="#9aa3ab"/>
+
+      <!-- Can shadow -->
+      <ellipse cx="100" cy="405" rx="68" ry="10" fill="#202830" opacity=".2"/>
+
+      <!-- Silver aluminum body -->
+      <path d="M39 63 Q39 44 56 38 L144 38 Q161 44 161 63 L161 365 Q161 389 143 397 L57 397 Q39 389 39 365Z"
+        fill="url(#silverBody)" stroke="#929ba2" stroke-width="1.2"/>
+
+      <g clip-path="url(#classicCanClip)">
+        <!-- Soft metallic reflections -->
+        <path d="M51 45 H68 V395 H51Z" fill="#fff" opacity=".22"/>
+        <path d="M77 40 H91 V397 H77Z" fill="#fff" opacity=".2"/>
+        <path d="M133 40 H146 V397 H133Z" fill="#fff" opacity=".3"/>
+        <path d="M39 100 Q100 125 161 100" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+
+        <!-- Sweeping white graphic -->
+        <path d="M118 25 C91 105 125 154 151 211 C171 256 145 333 105 410"
+          fill="none" stroke="#fff" stroke-width="12" opacity=".72"/>
+        <path d="M126 25 C100 105 132 156 157 211"
+          fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+
+        <!-- Diet Coke branding -->
+        <g transform="rotate(-90 100 210)">
+          <text x="100" y="179" text-anchor="middle"
+            font-family="Georgia, serif" font-size="29"
+            font-style="italic" font-weight="bold"
+            fill="#17191b">Diet</text>
+
+          <text x="100" y="252" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif"
+            font-size="57" font-style="italic" font-weight="bold"
+            letter-spacing="-4" fill="#e4002b">Coke</text>
+        </g>
+
+        <!-- Cold condensation droplets -->
+        <g fill="url(#waterDrop)" stroke="#fff" stroke-opacity=".65" stroke-width=".7">
+          <circle cx="49" cy="104" r="3.5"/>
+          <circle cx="66" cy="87" r="2.2"/>
+          <circle cx="83" cy="115" r="4"/>
+          <circle cx="145" cy="91" r="3"/>
+          <circle cx="153" cy="130" r="4.5"/>
+          <circle cx="52" cy="157" r="2.5"/>
+          <circle cx="74" cy="190" r="3"/>
+          <circle cx="146" cy="177" r="2.5"/>
+          <circle cx="56" cy="229" r="4"/>
+          <circle cx="83" cy="270" r="2.5"/>
+          <circle cx="150" cy="247" r="3.5"/>
+          <circle cx="62" cy="303" r="3"/>
+          <circle cx="91" cy="342" r="4"/>
+          <circle cx="143" cy="321" r="2.5"/>
+          <circle cx="119" cy="370" r="3"/>
+          <circle cx="48" cy="360" r="2"/>
+          <circle cx="130" cy="110" r="1.8"/>
+          <circle cx="105" cy="95" r="2"/>
+          <circle cx="70" cy="330" r="1.8"/>
+          <circle cx="154" cy="350" r="2"/>
+        </g>
+
+        <!-- Small condensation highlights -->
+        <g fill="#fff" opacity=".8">
+          <circle cx="48" cy="102" r="1"/>
+          <circle cx="82" cy="113" r="1.2"/>
+          <circle cx="151" cy="128" r="1.3"/>
+          <circle cx="55" cy="227" r="1.2"/>
+          <circle cx="90" cy="340" r="1.2"/>
+        </g>
+      </g>
+
+      <!-- Top shoulder and lid -->
+      <path d="M39 63 Q39 48 54 43 L146 43 Q161 48 161 63 L161 73 Q100 86 39 73Z"
+        fill="url(#silverLid)" stroke="#8c969e" stroke-width="1"/>
+      <ellipse cx="100" cy="44" rx="45" ry="7" fill="#dce1e5" stroke="#87929a" stroke-width="1"/>
+      <ellipse cx="100" cy="43" rx="29" ry="3.5" fill="#929ca4"/>
+      <path d="M83 43 Q100 38 117 43" fill="none" stroke="#fff" stroke-width="1.5"/>
+
+      <!-- Bottom aluminum rim -->
+      <path d="M46 382 Q100 399 154 382" fill="none" stroke="#707b84" stroke-width="4"/>
+      <path d="M50 386 Q100 400 150 386" fill="none" stroke="#f4f6f7" stroke-width="2"/>
     </svg>
   </div>
 
