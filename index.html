@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Diet Coke | Animated Can Scroll</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo">Diet Coke</div>
+    <nav class="desktop-nav">
+      <a href="#top">Home</a><a href="#taste">Taste</a><a href="#story">Story</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="hamburger" aria-label="Menu" onclick="toggleMobileNav()"><i></i><i></i><i></i></button>
+  </div>
+  <div class="mobile-nav" id="mobileMenu">
+    <a href="#top">Home</a><a href="#taste">Taste</a><a href="#story">Story</a><a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="can-wrap" aria-hidden="true">
+    <svg class="can" viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="metal" x1="0" x2="1">
+          <stop offset="0" stop-color="#9aa3ab"/><stop offset=".18" stop-color="#f4f6f8"/>
+          <stop offset=".42" stop-color="#cfd5da"/><stop offset=".62" stop-color="#ffffff"/>
+          <stop offset=".85" stop-color="#b3bbc2"/><stop offset="1" stop-color="#7f8890"/>
+        </linearGradient>
+        <linearGradient id="top" x1="0" x2="1"><stop offset="0" stop-color="#8d969e"/><stop offset=".5" stop-color="#e7ebee"/><stop offset="1" stop-color="#8d969e"/></linearGradient>
+      </defs>
+      <ellipse cx="100" cy="402" rx="72" ry="12" fill="#000" opacity=".18"/>
+      <path d="M38 62 Q38 44 56 38 L144 38 Q162 44 162 62 L162 372 Q162 392 144 398 L56 398 Q38 392 38 372Z" fill="url(#metal)"/>
+      <rect x="38" y="196" width="124" height="34" fill="#E4002B"/>
+      <rect x="38" y="196" width="124" height="34" fill="url(#metal)" opacity=".28"/>
+      <text x="100" y="178" text-anchor="middle" font-family="Archivo,Arial" font-weight="900" font-size="30" fill="#E4002B" font-stretch="75%">Diet</text>
+      <text x="100" y="260" text-anchor="middle" font-family="Archivo,Arial" font-weight="900" font-size="34" fill="#E4002B" font-stretch="75%">Coke</text>
+      <text x="100" y="336" text-anchor="middle" font-family="Archivo,Arial" font-weight="600" font-size="11" fill="#555">ZERO SUGAR · 330 ml</text>
+      <path d="M38 62 Q38 50 50 44 L150 44 Q162 50 162 62 L162 66 Q100 78 38 66Z" fill="url(#top)"/>
+      <ellipse cx="100" cy="46" rx="52" ry="7" fill="#c9d0d6"/>
+      <ellipse cx="100" cy="45" rx="36" ry="4" fill="#9aa3ab"/>
+    </svg>
+  </div>
+
+  <section class="hero" id="hero">
+    <h1><span class="line">Diet</span><span class="line">Coke</span></h1>
+    <p class="hero-sub">Zero sugar. Ice cold. Crisp to the last sip.</p>
+  </section>
+
+  <section class="intro" id="taste">
+    <div class="intro-left">
+      <h2>Light on calories. Big on taste.</h2>
+      <p>A sharp, bubbly cola made without sugar. Pour it over ice and it keeps its fizz.</p>
+      <a href="#" class="cta">Find a can</a>
+    </div>
+    <div class="intro-gap"></div>
+    <div class="intro-right">
+      <h3>What's inside</h3>
+      <div class="item"><b>Carbonated water</b><span>The fizz that carries the flavor.</span></div>
+      <div class="item"><b>Caramel color</b><span>The deep cola look.</span></div>
+      <div class="item"><b>Aspartame</b><span>Sweetness with no sugar.</span></div>
+      <div class="item"><b>Phosphoric acid</b><span>A tangy bite.</span></div>
+      <div class="item"><b>Natural flavors</b><span>The signature cola blend.</span></div>
+      <div class="item"><b>Caffeine</b><span>A light lift.</span></div>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <h2>The story so far</h2>
+    <div class="entry">
+      <div class="year">1982</div>
+      <div><h3>The launch</h3><p>Diet Coke arrives in a silver can with a red stripe, and a new kind of cola takes shape.</p></div>
+    </div>
+    <div class="entry">
+      <div class="year">Now</div>
+      <div><h3>Still ice cold</h3><p>Same crisp taste, still sugar free, and still best straight from the fridge.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="footer-inner">
+    <div class="logo">Diet Coke</div>
+    <div class="links"><a href="#">About</a><a href="#">Careers</a><a href="#">Terms</a></div>
+    <div class="links"><a href="mailto:pratyushdubey202004@gmail.com">pratyushdubey202004@gmail.com</a><a href="#">Instagram</a></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
