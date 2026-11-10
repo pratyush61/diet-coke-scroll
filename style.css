@@ -506,3 +506,16 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Commit 10: Consistent keyboard focus visibility */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #d7193f;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
