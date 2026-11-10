@@ -3,25 +3,31 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Diet Coke through an immersive, animated product experience featuring scroll-driven storytelling and interactive design." />
+  <meta name="theme-color" content="#E8ECEF" />
+  <meta property="og:title" content="Diet Coke | Animated Can Scroll" />
+  <meta property="og:description" content="Zero sugar. Ice cold. Crisp to the last sip. Explore the Diet Coke animated product experience." />
+  <meta property="og:type" content="website" />
 <title>Diet Coke | Animated Can Scroll</title>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to content</a>
 <header>
   <div class="header-inner">
     <div class="logo">Diet Coke</div>
-    <nav class="desktop-nav">
+    <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#top">Home</a><a href="#taste">Taste</a><a href="#story">Story</a><a href="#contact">Contact</a>
     </nav>
-    <button class="hamburger" aria-label="Menu" onclick="toggleMobileNav()"><i></i><i></i><i></i></button>
+    <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu" id="menuToggle"><i></i><i></i><i></i></button>
   </div>
-  <div class="mobile-nav" id="mobileMenu">
+  <div class="mobile-nav" id="mobileMenu" role="navigation" aria-label="Mobile navigation" hidden>
     <a href="#top">Home</a><a href="#taste">Taste</a><a href="#story">Story</a><a href="#contact">Contact</a>
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
   <div class="can-wrap" aria-hidden="true">
     <svg class="can" viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg">
       <defs>

@@ -62,3 +62,43 @@ footer{background:var(--ink);color:#cdd2d6;padding:50px 5vw 28px}
   .can-wrap{width:clamp(110px,34vw,170px)}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Accessibility: skip navigation */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 12px 20px;
+  background: var(--red);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Respect the native hidden state of mobile navigation */
+.mobile-nav[hidden] {
+  display: none;
+}
+
+/* Improve keyboard navigation visibility */
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 4px;
+}
+
+/* Avoid unnecessary transitions for reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
