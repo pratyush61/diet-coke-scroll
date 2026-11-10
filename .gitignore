@@ -11,11 +11,11 @@ node_modules/
 # Logs
 *.log
 
-# Environment variables
+# Environment files
 .env
 .env.local
 .env.*.local
 
-# Editor files
+# Editors
 .vscode/
 .idea/
