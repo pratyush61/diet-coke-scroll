@@ -27,7 +27,7 @@ This is an unofficial fan-made design demonstration. Diet Coke and Coca-Cola are
 - Responsive layouts for different screen sizes.
 - Reduced-motion CSS support.
 
-## 🛠️ Tech Stacks
+## 🛠️ Tech Stack
 
 - HTML5
 - CSS3
